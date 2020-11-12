@@ -1,0 +1,13 @@
+<h1 class='text-center'>🍹 Amazing Cocktails 🍹</h1>
+
+<ul>
+  <% @cocktails.each do |cocktail| %>
+    <li>
+      <%= link_to cocktail.name, cocktail_path(cocktail.id) %>
+    </li>
+  <% end %>
+</ul>
+
+<br>
+
+<%= link_to 'Create my cocktail', new_cocktail_path %>
