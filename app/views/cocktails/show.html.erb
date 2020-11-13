@@ -3,13 +3,13 @@
 <ul>
 <li> <%= @cocktail.name %> </li>
     <% @cocktail.doses.each do |dose|%>
-    <%= dose.description %>
+    <%= dose.description %> |
     <%= dose.ingredient.name %>
-    <%= link_to 'Delete', dose_path(dose), method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%= link_to 'Delete', dose_path(dose), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
   <% end %>
 </ul>
 <br>
 
-<%= link_to 'Back', root_path %> |
-<%= link_to 'Add a dose', new_cocktail_dose_path(@cocktail) %>
+<%= link_to 'Back', root_path, class: "btn btn-dark" %> |
+<%= link_to 'Add a dose', new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
 
